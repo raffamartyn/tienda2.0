@@ -41,7 +41,10 @@ import {
               display={{ base: 'none', md: 'flex' }}
               
             >
-              <Link href="/">Home</Link>
+                <Button>
+                    <Link href="/">Home</Link>
+                </Button>
+              
             </HStack>
           
         </Flex>
