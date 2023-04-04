@@ -28,7 +28,7 @@ const Ropa_n: React.FC<Props> = ({products}) => {
     
     <Stack p={10}>
       <Grid gridGap={12} templateColumns="repeat(auto-fill, minmax(240px, 1fr))">
-    {products.map(productd =>
+    {products.map(product =>
        <Stack 
        backgroundColor={'red.400'}
        padding={4}
@@ -39,14 +39,14 @@ const Ropa_n: React.FC<Props> = ({products}) => {
          <Image
          as={motion.img}
          cursor={"pointer"}
-         layoutId={productd.LINK}
-         onClick={()=> setselectedImage(productd.LINK)}
-         src={productd.LINK} maxHeight={170} objectFit='cover' alt=""/>
-      <Text color={'black.500'}>{productd.ROPAN}</Text>
-      <Text>{productd.DETALLEN}</Text>
-      <Text>{productd.PRECION}</Text>
+         layoutId={product.LINK}
+         onClick={()=> setselectedImage(product.LINK)}
+         src={product.LINK} maxHeight={170} objectFit='cover' alt=""/>
+      <Text color={'black.500'}>{product.ROPAN}</Text>
+      <Text>{product.DETALLEN}</Text>
+      <Text>{product.PRECION}</Text>
       </Stack>
-      <Button onClick={() => handleComprar(productd)} >comprar</Button>
+      <Button onClick={() => handleComprar(product)} >comprar</Button>
       
       </Stack>)}
     </Grid>

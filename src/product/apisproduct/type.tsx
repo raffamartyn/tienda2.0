@@ -11,5 +11,10 @@ export interface Product {
     LINKC: string;
     DETALLEC: string;
     PRECIOC: number;
-    
+    ROPAD: string;
+    ID_ROPAD: string;
+    IMAGED:string;
+    LINKD: string;
+    DETALLED: string;
+    PRECIOD: number;
 } 
