@@ -1,8 +1,9 @@
 import React from "react";
 import { GetStaticProps } from "next";
 
-import { Productn } from "./apisproduct/type";
-import apin from "./apisproduct/apin";
+import { Productd } from "./apisproduct/type";
+import apid from "./apisproduct/apid";
+
 import { Button, Flex, Grid, Image, Stack, Text } from "@chakra-ui/react";
 
 import { motion, AnimatePresence, } from 'framer-motion';
@@ -10,13 +11,13 @@ import { motion, AnimatePresence, } from 'framer-motion';
 
 
 interface Props{
-  ropan: Productn[];
+  ropad: Productd[];
 }
 
-const Ropa_n: React.FC<Props> = ({ropan}) => {
+const Ropa_d: React.FC<Props> = ({ropad}) => {
   const [selectedImage, setselectedImage] = React.useState <string | null> (null);
-  const handleComprar = (product: Productn) => {
-    const message = `¡Hola! Me interesa comprar el producto ${product.ROPAN}, con un precio de ${product.PRECION}.`;
+  const handleComprar = (product: Productd) => {
+    const message = `¡Hola! Me interesa comprar el producto ${product.ROPAD}, con un precio de ${product.PRECIOD}.`;
     const url = `https://wa.me/3875057208/?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   }
@@ -28,7 +29,7 @@ const Ropa_n: React.FC<Props> = ({ropan}) => {
     
     <Stack p={10}>
       <Grid gridGap={12} templateColumns="repeat(auto-fill, minmax(240px, 1fr))">
-    {ropan.map(product =>
+    {ropad.map(product =>
        <Stack 
        backgroundColor={'red.400'}
        padding={4}
@@ -39,12 +40,12 @@ const Ropa_n: React.FC<Props> = ({ropan}) => {
          <Image
          as={motion.img}
          cursor={"pointer"}
-         layoutId={product.LINK}
-         onClick={()=> setselectedImage(product.LINK)}
-         src={product.LINK} maxHeight={170} objectFit='cover' alt=""/>
-      <Text color={'black.500'}>{product.ROPAN}</Text>
-      <Text>{product.DETALLEN}</Text>
-      <Text>{product.PRECION}</Text>
+         layoutId={product.LINKD}
+         onClick={()=> setselectedImage(product.LINKD)}
+         src={product.LINKD} maxHeight={170} objectFit='cover' alt=""/>
+      <Text color={'black.500'}>{product.ROPAD}</Text>
+      <Text>{product.DETALLED}</Text>
+      <Text>{product.PRECIOD}</Text>
       </Stack>
       <Button onClick={() => handleComprar(product)} >comprar</Button>
       
@@ -86,13 +87,13 @@ const Ropa_n: React.FC<Props> = ({ropan}) => {
 };
 
 export const getStaticProps: GetStaticProps = async () =>{
-  const ropan = await apin.List();
+  const ropad = await apid.List();
   return{
     props: {
-      ropan,
+      ropad,
     },
     revalidate: 2, 
   }
 }
 
-export default Ropa_n;
+export default Ropa_d;
