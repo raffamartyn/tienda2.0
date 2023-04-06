@@ -21,6 +21,7 @@ const Ropa_c: React.FC<Props> = ({ropac}) => {
     const url = `https://wa.me/3875057208/?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   }
+  
   return (
   
     <Stack>
@@ -28,7 +29,7 @@ const Ropa_c: React.FC<Props> = ({ropac}) => {
       
     
     <Stack p={10}>
-      <Grid gridGap={12} templateColumns="repeat(auto-fill, minmax(240px, 1fr))">
+      <Grid gridGap={12} templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(auto-fill, minmax(240px, 1fr))' }}>
     {ropac.map(product =>
        <Stack 
        backgroundColor={'red.400'}

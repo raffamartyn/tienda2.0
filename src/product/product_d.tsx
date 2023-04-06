@@ -28,7 +28,8 @@ const Ropa_d: React.FC<Props> = ({ropad}) => {
       
     
     <Stack p={10}>
-      <Grid gridGap={12} templateColumns="repeat(auto-fill, minmax(240px, 1fr))">
+      <Grid gridGap={12} templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(auto-fill, minmax(240px, 1fr))' }}
+>
     {ropad.map(product =>
        <Stack 
        backgroundColor={'red.400'}
