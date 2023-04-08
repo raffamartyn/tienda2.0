@@ -26,7 +26,7 @@ const Ropa_n: React.FC<Props> = ({ropan}) => {
       
       
     
-    <Stack p={{base:'4', md:'12'}}>
+    <Stack p={{base:'none', md:'12'}}>
       <Grid gridGap={{base:'3',md:'12'}} templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(auto-fill, minmax(240px, 1fr))' }}
 >
     {ropan.map(product =>
