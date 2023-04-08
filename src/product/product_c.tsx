@@ -39,7 +39,7 @@ const Ropa_c: React.FC<Props> = ({ropac}) => {
        backgroundColor={'whitch'}
        padding={['1','4']}
        spacing={['1','3']}
-       maxWidth={{base:'184px',md: '240px'}}
+       maxWidth={{base:'184px',md: 'none'}}
        >
       
          <Stack spacing={1}>
