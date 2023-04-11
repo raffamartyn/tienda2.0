@@ -46,15 +46,16 @@ const listado: React.FC<Props> = ({ropad,ropan,ropac}) => {
   
   </TabList>
   <TabPanels pl={[0,10]} pr={[0,10]}>
+
     <TabPanel backgroundColor={'blue.500'}>
       
-    <Ropa_n ropan={ropan}/>
+    <Ropa_d ropad= {ropad}/>
   
     </TabPanel>
     <TabPanel backgroundColor={'green.400'}>
 
-      
-    <Ropa_d ropad= {ropad}/>
+      <Ropa_n ropan={ropan}/>
+    
 
     </TabPanel>
     <TabPanel backgroundColor={'yellow.400'}>
@@ -64,7 +65,7 @@ const listado: React.FC<Props> = ({ropad,ropan,ropac}) => {
     </TabPanel>
     <TabPanel backgroundColor={'red.400'}>
       
-    <Ropa_n ropan={ropan}/>
+    
 
     </TabPanel>
   </TabPanels>
