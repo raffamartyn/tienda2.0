@@ -47,6 +47,9 @@ import {
                 <Button>
                     <Link href="./productos">Productos</Link>
                 </Button>
+                <Button>
+                    <Link href="./nosotros">Nosotros</Link>
+                </Button>
               
             </HStack>
           
@@ -56,7 +59,8 @@ import {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
             <Link href="./">Home</Link>
-            <Link href="./productos">Productos</Link>  
+            <Link href="./productos">Productos</Link>
+            <Link href="./nosotros">Nosotros</Link>  
             </Stack>
           </Box>
         ) : null}

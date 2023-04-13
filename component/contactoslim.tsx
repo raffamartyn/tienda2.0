@@ -21,7 +21,7 @@ const Contactoslim = () => {
             <Img width={'100px'} src='./map.png'/>
         </Square>    
         <Square>
-            <Heading p={2} size={'md'}>los trocales calle xxxx casa xx</Heading>
+            <Heading p={2} size={'md'}>los troncales calle xxxx casa xx</Heading>
         </Square>
         <Divider/>
         <Square>
@@ -37,7 +37,7 @@ const Contactoslim = () => {
     <Img src='./facebook.png'/>
     </Square>  
     <Square>
-    <Heading p={2} size={'lg'}>vistanos en facebook</Heading>
+    <Heading p={2} size={'lg'}>visitanos en facebook</Heading>
     </Square>
   </GridItem>
   <GridItem  borderWidth='1px'

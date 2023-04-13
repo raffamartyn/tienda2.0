@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "component/layout";
-import { Tabs,Tab, TabList, TabPanel, TabPanels, Image, Text, SimpleGrid, } from "@chakra-ui/react";
+import { Tabs,Tab, TabList, TabPanel, TabPanels, Image, Text, SimpleGrid,Stack } from "@chakra-ui/react";
 import { GetStaticProps } from "next";
 
 import Ropa_d from "@/product/product_d";
@@ -32,6 +32,15 @@ const listado: React.FC<Props> = ({ropad,ropan,ropac}) => {
     
   return(
         <Layout>
+
+            <Stack pb={5} >
+
+            <Image
+            height={['40vh','100vh']}
+            src="hederpro.gif"
+            />
+
+            </Stack>
           
 
 <Tabs variant='unstyled'>
@@ -41,7 +50,7 @@ const listado: React.FC<Props> = ({ropad,ropan,ropac}) => {
     <Tab _selected={{ color: 'white', bg: 'blue.500' }} w='200' pb='12'><Image w={100} src={'./ropa.png'} alt={''}/><Text pt='150' position={'absolute'}>NIÑOS</Text></Tab>
     <Tab _selected={{ color: 'white', bg: 'green.400' }} w='200' pb='12'><Image w={100} src={'./vestir.png'} alt={''}/><Text pt='150' position={'absolute'}>DAMA</Text></Tab>
     <Tab _selected={{ color: 'white', bg: 'yellow.400' }} w='200' pb='12'><Image w={100} src={'./sudadera-con-capucha.png'} alt={''}/><Text pt='150' position={'absolute'}>CABALLEROS</Text></Tab>
-    <Tab _selected={{ color: 'white', bg: 'red.400' }} w='200' pb='12'><Image w={100} src={'./ropa.png'} alt={''}/><Text pt='150' position={'absolute'}>NIÑAS</Text></Tab>
+    <Tab _selected={{ color: 'white', bg: 'red.400' }} w='200' pb='12'><Image w={100} src={'./ropa.png'} alt={''}/><Text pt='150' position={'absolute'}>OTROS</Text></Tab>
     </SimpleGrid>
   
   </TabList>
