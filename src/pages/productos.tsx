@@ -58,13 +58,13 @@ const listado: React.FC<Props> = ({ropad,ropan,ropac}) => {
 
     <TabPanel backgroundColor={'blue.500'}>
       
-    <Ropa_d ropad= {ropad}/>
+    <Ropa_n ropan={ropan}/>
   
     </TabPanel>
     <TabPanel backgroundColor={'green.400'}>
 
-      <Ropa_n ropan={ropan}/>
-    
+      
+      <Ropa_d ropad= {ropad}/>
 
     </TabPanel>
     <TabPanel backgroundColor={'yellow.400'}>

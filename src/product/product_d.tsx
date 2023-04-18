@@ -18,7 +18,7 @@ const Ropa_d: React.FC<Props> = ({ropad}) => {
   const [selectedImage, setselectedImage] = React.useState <string | null> (null);
   const handleComprar = (product: Productd) => {
     const message = `¡Hola! Me interesa comprar el producto ${product.ROPAD}, con un precio de ${product.PRECIOD}.`;
-    const url = `https://wa.me/3875057208/?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/3875679936/?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   }
   return (
